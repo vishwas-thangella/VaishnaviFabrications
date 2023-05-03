@@ -8,7 +8,7 @@ const app = express();
 ConnectToDB();
 
 app.use(cors({
-    origin:["*"]
+    origin:["https://vaishnavi-fabrications.vercel.app/"]
 }));
 app.use(express.json());
 app.use('/api/v1/item',itemRoute);
