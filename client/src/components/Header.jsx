@@ -33,7 +33,7 @@ const Header = () =>{
                             navigate('/');
                             setLoading(false);
                         },5000);
-                        navigate('/');
+                        // navigate('/');
                     }).catch(err=>{
                         alert(err.message);
                     })
