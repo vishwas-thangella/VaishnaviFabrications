@@ -7,9 +7,11 @@ const cors = require('cors');
 const app = express();
 ConnectToDB();
 
-app.use(cors({
-    origin:'https://vaishnavi-fabrications.vercel.app'
-}));
+const CorsOptions = {
+    origin:"https://vaishnavi-fabrications.vercel.app"
+}
+
+app.use(cors(CorsOptions));
 app.use(express.json());
 app.use('/api/v1/item',itemRoute);
 
