@@ -2,15 +2,17 @@ import React, { useState } from 'react';
 import { AppBar,Avatar,Toolbar,  IconButton } from '@mui/material';
 import Logo from '../assets/logo.png';
 import '../App.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { LoadingButton } from '@mui/lab';
 import { signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../database/firebase';
+import { Actions } from '../redux/Store';
 const Header = () =>{
     const Auth = useSelector(state=>state.AdminLogged);
     const navigate = useNavigate();
     const [loading,setLoading] = useState(false);
+    const dispatch = useDispatch();
     return(
         <AppBar position='static' sx={{backgroundColor:"white",color:"black",boxShadow:"-3px -8px 15px gray"}}>
             <Toolbar>
@@ -27,6 +29,7 @@ const Header = () =>{
                     setLoading(true);
                     signOut(auth).then(()=>{
                         setTimeout(()=>{
+                            dispatch(Actions.setAdminLogged(false));
                             navigate('/');
                             setLoading(false);
                         },5000);
