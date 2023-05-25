@@ -109,10 +109,18 @@ const Homepage = () => {
                                 <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="whatsapp" width="30px" height="30px" className='mt-4' />
                                 <h6 className='text-black mt-4'>+91 9000552347 , 9951480617</h6>
                             </div>
-                            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                                <img src="https://workingwithdog.com/wp-content/uploads/2016/05/new_instagram_logo-1024x1024.jpg" alt="whatsapp" width="30px" height="30px" className='mt-4' />
-                                <h6 className='text-black mt-4'>Vaishnavi Fabrications</h6>
-                            </div>
+                            <a href="https://www.instagram.com/vyshnavi_weldingworks/?igshid=MzRlODBiNWFlZA%3D%3D" style={{textDecoration:"none"}} target='_blank'>
+                                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                                    <img src="https://workingwithdog.com/wp-content/uploads/2016/05/new_instagram_logo-1024x1024.jpg" alt="whatsapp" width="30px" height="30px" className='mt-4' />
+                                    <h6 className='text-black mt-4'>Vyshnavi_weldingworks</h6>
+                                </div>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=100092196819981" style={{textDecoration:"none"}} target='_blank'>
+                                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                                    <img src="https://img.freepik.com/premium-vector/blue-social-media-logo_197792-1759.jpg" alt="whatsapp" width="30px" height="30px" className='mt-4' />
+                                    <h6 className='text-black mt-4'>Vaishnavi Fabrications</h6>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
